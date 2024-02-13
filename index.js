@@ -11,7 +11,7 @@ mongoose.connect(process.env.DB_URL)
 
 const UserSchema = new Schema({
   username: String,
-});
+}, { versionKey: false});
 const User = mongoose.model("User", UserSchema);
 
 const ExerciseSchema = new Schema({
